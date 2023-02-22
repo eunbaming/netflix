@@ -3,6 +3,7 @@ body {
   color: #fff !important;
 }
 
+/* navigation */
 .nav-item {
   color: #fff;
   text-decoration: none;
@@ -12,6 +13,7 @@ body {
   color: crimson;
 }
 
+/* banner */
 .banner {
   height: 600px;
   display: flex;
@@ -29,4 +31,12 @@ body {
   width: 40%;
   margin-left: 30px;
   z-index: 1;
+}
+
+/* loading */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
