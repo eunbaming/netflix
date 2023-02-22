@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Jua&family=Montserrat:wght@200&family=Nanum+Brush+Script&family=Poor+Story&family=Titillium+Web:ital,wght@1,300&display=swap');
+
 body {
   background: #000 !important;
   color: #fff !important;
+  font-family: 'Montserrat', sans-serif !important; 
+}
+
+.movie-slide {
+  margin-top: 30px;
 }
 
 /* navigation */
@@ -39,4 +46,24 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+
+/* movie card */
+.card-size {
+  width: 300px;
+  height: 200px;
+  background-size: cover;
+  padding: 20px;
+}
+.adult {
+  color: crimson;
+  margin-left: 20px;
+}
+.card-genre {
+  margin: 3px;
+}
+.card-detail {
+  display: flex;
+  align-items: flex-end;
+  height: 110px;
 }
