@@ -75,3 +75,42 @@ body {
   display: flex;
   align-items: flex-end;
 } */
+
+/* movie detail */
+.detail-container {
+  margin: 40px 0 40px 0;
+}
+.detail-img {
+  display: flex;
+  justify-content: flex-end;
+}
+.detail-img-size {
+  width: 400px;
+  height: 600px;
+  background-size: cover;
+}
+.detail-content {
+  max-width: 70%;
+}
+.rating-people-adult {
+  padding: 10px 20px 5px 0;
+}
+.fa-star {
+  color: orange;
+  margin-right: 5px;
+}
+.fa-people-line {
+  color: gray;
+  margin-right: 5px;
+}
+.budget-revenue-release-time div {
+  padding: 5px;
+}
+.detail-badge {
+  width: 120px;
+  display: inline-block;
+  background-color: crimson;
+  border-radius: 20px;
+  text-align: center;
+  margin-right: 10px;
+}
