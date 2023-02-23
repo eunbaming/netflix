@@ -1,7 +1,8 @@
 let initialState = {
   movieDetail : {},
   genreList : [],
-  loading : true
+  loading : true,
+  movieReview : []
 }
 function detailReducer (state=initialState, action) {
   let {type, payload} = action
@@ -16,6 +17,7 @@ function detailReducer (state=initialState, action) {
         ...state,
         movieDetail : payload.movieDetail,
         genreList : payload.genreList,
+        movieReview : payload.movieReview,
         loading : false
       }
     default :

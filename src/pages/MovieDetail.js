@@ -6,11 +6,16 @@ import { detailAction } from '../redux/actions/detailAction'
 import ReactDOM from 'react-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPeopleLine, faStar } from '@fortawesome/free-solid-svg-icons'
+import Relate from '../components/Relate'
+import Review from '../components/Review'
 
 const MovieDetail = () => {
   const {id} = useParams()
-  console.log("id", id)
+  // console.log("id", id)
   const detail = useSelector(state => state.detail.movieDetail)
+  const {movieReview} = useSelector(state => state.detail)
+  console.log("reviews", movieReview)
+
   const dispatch = useDispatch()
   const getMovieDetail = () => {
     dispatch(detailAction.getMovieDetail(id))
@@ -62,12 +67,23 @@ const MovieDetail = () => {
               </div>
               <hr />
             </div>
-            <p>
-              
-            </p>
           </div>
         </Col>
       </Row>
+
+      <div className='tab-content'>
+        <input type='radio' name='tabmenu' id='tab01' checked/>
+        <label className='reviews-tab' for='tab01'>REVIEWS</label>
+        <input type='radio' name='tabmenu' id='tab02' />
+        <label for='tab02'>RELATED MOVIES</label>
+
+        <div className='conbox con1 review-area'>
+          {movieReview.map((review) => (
+            <Col><Review item={review}/></Col>
+          ))}
+        </div>
+        <div className='conbox con2'>345</div>
+      </div>
     </Container>
   )
 }

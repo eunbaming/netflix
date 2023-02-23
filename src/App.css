@@ -79,6 +79,7 @@ body {
 /* movie detail */
 .detail-container {
   margin: 40px 0 40px 0;
+  position: relative;
 }
 .detail-img {
   display: flex;
@@ -113,4 +114,48 @@ body {
   border-radius: 20px;
   text-align: center;
   margin-right: 10px;
+}
+
+.tab-content {
+  position: absolute;
+  left: 19%;
+  margin-top: 30px;
+}
+.reviews-tab {
+  margin-right: 10px;
+}
+input[type='radio'] {
+  display: none;
+}
+input[type='radio'] + label {
+  display: inline-block;
+  padding: 20px;
+  background: #fff;
+  color: #747691;
+  cursor: pointer;
+}
+input[type='radio']:checked + label {
+  background: #fe4536;
+  color: #fff;
+}
+.conbox {
+  width: 1100px;
+  margin: auto;
+  display: none;
+}
+input[id='tab01']:checked ~ .con1,
+input[id='tab02']:checked ~ .con2,
+input[id='tab03']:checked ~ .con3 {
+  display: block;
+}
+
+/* review */
+.review-area {
+  border: 1px solid #fff;
+  padding: 30px;
+  margin-top: 20px;
+  width: 900px;
+} 
+.review-author {
+  color: orange;
 }
