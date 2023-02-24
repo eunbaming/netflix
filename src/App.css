@@ -61,7 +61,8 @@ body {
   padding: 20px;
   opacity: 0;
 }
-.card-size:hover .overlay {
+.card-size,
+.filter-size:hover .overlay {
   opacity: 1;
 }
 .adult {
@@ -70,6 +71,10 @@ body {
 }
 .card-genre {
   margin: 3px;
+}
+.movie-title {
+  font-family: 'Crimson Text', serif !important; 
+  font-size: 40px;
 }
 
 /* movie detail */
@@ -177,7 +182,15 @@ input[id='tab03']:checked ~ .con3 {
 .movie-size:hover .overlay {
   opacity: 1;
 }
-.movie-title {
-  font-family: 'Crimson Text', serif !important; 
-  font-size: 40px;
+
+/* all movies */
+.filter-size {
+  width: 350px;
+  height: 400px;
+  background-size: cover;
+  margin: 10px;
+  border-radius: 10px;
+}
+.movie-section {
+  
 }
