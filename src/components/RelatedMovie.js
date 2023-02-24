@@ -1,19 +1,20 @@
 import React from 'react'
-import { Badge } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 import { useSelector } from 'react-redux'
+import {Badge} from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
 
-const MovieCard = ({item}) => {
-  // console.log("item", item)
-  const {genreList} = useSelector(state => state.movie)
-  console.log("ddd", genreList)
+const RelatedMovie = ({item}) => {
+  // console.log("r", item)
+  const {genreList} = useSelector(state => state.detail)
   const navigate = useNavigate()
   const goToMovieDetail = () => {
     navigate(`/movies/${item.id}`)
   }
+
   return (
     <div
-    className='card-size'
+    className='movie-size'
     style={{backgroundImage : "url(" + `https://www.themoviedb.org/t/p/w710_and_h400_multi_faces/${item.poster_path}` + ")"}}
     onClick={goToMovieDetail}
     >
@@ -32,4 +33,4 @@ const MovieCard = ({item}) => {
   )
 }
 
-export default MovieCard
+export default RelatedMovie

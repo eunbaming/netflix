@@ -71,10 +71,6 @@ body {
 .card-genre {
   margin: 3px;
 }
-/* .card-detail {
-  display: flex;
-  align-items: flex-end;
-} */
 
 /* movie detail */
 .detail-container {
@@ -149,6 +145,11 @@ input[id='tab03']:checked ~ .con3 {
   display: block;
 }
 
+/* trailer */
+.trailer {
+  text-align: center;
+}
+
 /* review */
 .review-area {
   border: 1px solid #fff;
@@ -158,4 +159,25 @@ input[id='tab03']:checked ~ .con3 {
 } 
 .review-author {
   color: orange;
+}
+
+/* related movie */
+.related-area {
+  width: 900px;
+  padding: 30px;
+  margin-top: 20px;
+}
+.movie-size {
+  width: 350px;
+  height: 250px;
+  background-size: cover;
+  margin: 5px;
+  cursor: pointer;
+}
+.movie-size:hover .overlay {
+  opacity: 1;
+}
+.movie-title {
+  font-family: 'Crimson Text', serif !important; 
+  font-size: 40px;
 }
