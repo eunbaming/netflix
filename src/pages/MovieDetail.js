@@ -22,6 +22,7 @@ const MovieDetail = () => {
   const dispatch = useDispatch()
   const getMovieDetail = () => {
     dispatch(detailAction.getMovieDetail(id))
+    console.log("iddd", id)
   }
   useEffect (() => {
     getMovieDetail()
@@ -79,9 +80,9 @@ const MovieDetail = () => {
 
       <div className='tab-content'>
         <input type='radio' name='tabmenu' id='tab01' checked/>
-        <label className='reviews-tab' for='tab01'>REVIEWS</label>
+        <label className='reviews-tab' htmlFor='tab01'>REVIEWS</label>
         <input type='radio' name='tabmenu' id='tab02' />
-        <label for='tab02'>RELATED MOVIES</label>
+        <label htmlFor='tab02'>RELATED MOVIES</label>
 
         <div className='conbox con1 review-area'>
           {movieReview.map((review) => (

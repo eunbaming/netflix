@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 const MovieCard = ({item}) => {
   // console.log("item", item)
   const {genreList} = useSelector(state => state.movie)
-  console.log("ddd", genreList)
+  // console.log("ddd", genreList)
   const navigate = useNavigate()
   const goToMovieDetail = () => {
     navigate(`/movies/${item.id}`)

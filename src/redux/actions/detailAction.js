@@ -1,6 +1,7 @@
 import api from "../api"
 
-function getMovieDetail (id) {
+function getMovieDetail (id, page) {
+  console.log('bbb', page)
   const API_KEY = process.env.REACT_APP_API_KEY
   return async (dispatch) => {
     try {
