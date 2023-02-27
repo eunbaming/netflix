@@ -30,48 +30,35 @@ function getMovies (page) {
   };
 };
 
-function getMoviesAll (page) {
-  const API_KEY = process.env.REACT_APP_API_KEY;
-
-  return async (dispatch) => {
-    const popularMovieApi = api.get(`/movie/popular?api_key=${API_KEY}&page=${page}`);
-    const genreApi = api.get(`/genre/movie/list?api_key=${API_KEY}&language=en-US`);
-
-    let [popularMovies, genreList] = await Promise.all([popularMovieApi, genreApi]);
-
-    dispatch({
-      type : "GET_MOVIES_ALL_SUCCESS",
-      payload : {
-        popularMovies : popularMovies.data,
-        genreList : genreList.data.genres
-      }
-    });
-  };
-};
-
 function getSearch (page, keyword) {
   const API_KEY = process.env.REACT_APP_API_KEY;
 
   return async (dispatch) => {
-    dispatch({type : "GET_SEARCH_REQUEST"});
-    const popularMovieApi = api.get(`/movie/popular?api_key=${API_KEY}&page=${page}`);
-    const searchApi = api.get(`/search/movie?api_key=${API_KEY}&query=${keyword}&page=${page}`);
-    const genreApi = api.get(`/genre/movie/list?api_key=${API_KEY}&language=en-US`);
-
-    let [popularMovies, searchMovies, genreList] = await Promise.all([popularMovieApi, searchApi, genreApi]);
-
-    dispatch({
-      type : "GET_SEARCH_SUCCESS",
-      payload : {
-        popularMovies : popularMovies.data,
-        searchMovies : searchMovies.data,
-        genreList : genreList.data.genres
-      }
-    });
+    try {
+      dispatch({type : "GET_SEARCH_REQUEST"});
+      const popularMovieApi = api.get(`/movie/popular?api_key=${API_KEY}&page=${page}`);
+      const searchApi = api.get(`/search/movie?api_key=${API_KEY}&query=${keyword}&page=${page}`);
+      const genreApi = api.get(`/genre/movie/list?api_key=${API_KEY}&language=en-US`);
+  
+      let [popularMovies, searchMovies, genreList] = await Promise.all([popularMovieApi, searchApi, genreApi]);
+  
+      dispatch({
+        type : "GET_SEARCH_SUCCESS",
+        payload : {
+          popularMovies : popularMovies.data,
+          searchMovies : searchMovies.data,
+          genreList : genreList.data.genres
+        }
+      });
+    } catch (error) {
+      dispatch({
+        type : "GET_MOVIES_FAILURE"
+      });
+    }
   };
 };
 
 
 export const movieAction = {
-  getMovies, getMoviesAll, getSearch
+  getMovies, getSearch
 };

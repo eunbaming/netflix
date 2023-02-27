@@ -24,17 +24,6 @@ function movieReducer (state=initialState, action) {
         genreList : payload.genreList,
         loading : false
       };
-    case "GET_MOVIES_FAILURE":
-      return {
-        ...state,
-        loading : false
-      };
-    case "GET_MOVIES_ALL_SUCCESS":
-      return {
-        ...state,
-        popularMovies : payload.popularMovies,
-        loading : false
-      };
     case "GET_SEARCH_REQUEST" :
       return {
         ...state,
@@ -48,6 +37,11 @@ function movieReducer (state=initialState, action) {
         genreList :payload.genreList,
         loading : false
       };
+    case "GET_MOVIES_FAILURE":
+    return {
+      ...state,
+      loading : false
+    };
     default :
       return {...state};
   };
