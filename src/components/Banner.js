@@ -1,7 +1,6 @@
-import React from 'react'
+import React from 'react';
 
 const Banner = ({movie}) => {
-  console.log("movie", movie)
   return (
     <div
       className='banner'
@@ -15,6 +14,6 @@ const Banner = ({movie}) => {
       </div>
     </div>
   )
-}
+};
 
-export default Banner
+export default Banner;

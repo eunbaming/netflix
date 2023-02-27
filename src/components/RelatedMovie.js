@@ -1,16 +1,18 @@
-import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
-import { useSelector } from 'react-redux'
-import {Badge} from 'react-bootstrap'
-import { useNavigate } from 'react-router-dom'
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import {Badge} from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
+import { detailAction } from '../redux/actions/detailAction';
 
 const RelatedMovie = ({item}) => {
-  // console.log("r", item)
-  const {genreList} = useSelector(state => state.detail)
-  const navigate = useNavigate()
+  const {genreList} = useSelector(state => state.detail);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
   const goToMovieDetail = () => {
     navigate(`/movies/${item.id}`)
-  }
+    dispatch(detailAction.getMovieDetail(item.id))
+  };
 
   return (
     <div
@@ -31,6 +33,6 @@ const RelatedMovie = ({item}) => {
       </div>
     </div>
   )
-}
+};
 
-export default RelatedMovie
+export default RelatedMovie;

@@ -5,14 +5,17 @@ import Home from './pages/Home';
 import Movies from './pages/Movies';
 import MovieDetail from './pages/MovieDetail';
 import Navigation from './components/Navigation';
+import { useState } from 'react';
 
 function App() {
+  const [keyword, setKeyword] = useState('');
+
   return (
     <div>
-      <Navigation />
+      <Navigation setKeyword={setKeyword}/>
       <Routes>
         <Route path='/' element={<Home />}></Route>
-        <Route path='/movies' element={<Movies />}></Route>
+        <Route path='/movies' element={<Movies keyword={keyword} setKeyword={setKeyword} />}></Route>
         <Route path='/movies/:id' element={<MovieDetail />}></Route>
       </Routes>
     </div>

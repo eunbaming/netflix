@@ -1,16 +1,17 @@
-import React, { useState } from 'react'
-import { useSelector } from 'react-redux'
-import { Button, Modal } from 'react-bootstrap'
-import YouTube, { YouTubeProps } from 'react-youtube'
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
+import { Button, Modal } from 'react-bootstrap';
+import YouTube from 'react-youtube';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFilm } from '@fortawesome/free-solid-svg-icons'
+import { faFilm } from '@fortawesome/free-solid-svg-icons';
 
 const MovieTrailer = () => {
-  const [show, setShow] = useState(false)
-  const [fullscreen, setFullscreen] = useState(true)
-  const handleClose = () => setShow(false)
-  const handleShow = () => setShow(true)
-  const {movieTrailer} = useSelector(state => state.detail)
+  const [show, setShow] = useState(false);
+  const [fullscreen, setFullscreen] = useState(true);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  const {movieTrailer} = useSelector(state => state.detail);
+
   return (
     <div>
       <Button variant="danger" onClick={handleShow}>
@@ -24,6 +25,6 @@ const MovieTrailer = () => {
       </Modal>
     </div>
   )
-}
+};
 
-export default MovieTrailer
+export default MovieTrailer;

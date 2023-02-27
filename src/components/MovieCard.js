@@ -1,16 +1,15 @@
-import React from 'react'
-import { Badge } from 'react-bootstrap'
-import { useSelector } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
+import React from 'react';
+import { Badge } from 'react-bootstrap';
+import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 const MovieCard = ({item}) => {
   // console.log("item", item)
-  const {genreList} = useSelector(state => state.movie)
-  // console.log("ddd", genreList)
-  const navigate = useNavigate()
+  const {genreList} = useSelector(state => state.movie);
+  const navigate = useNavigate();
   const goToMovieDetail = () => {
-    navigate(`/movies/${item.id}`)
-  }
+    navigate(`/movies/${item.id}`);
+  };
   return (
     <div
     className='card-size'
@@ -24,12 +23,12 @@ const MovieCard = ({item}) => {
           )}
         </div>
         <div className='card-detail'>
-          <span>{item.vote_average}</span>
+          <span className='vote'>{item.vote_average}</span>
           <span className='adult'>{item.adult ? "Up 19" : "Under 18"}</span>
         </div>
       </div>
     </div>
   )
-}
+};
 
-export default MovieCard
+export default MovieCard;

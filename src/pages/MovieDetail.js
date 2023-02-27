@@ -1,32 +1,29 @@
-import React, { useEffect } from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
-import { useDispatch, useSelector } from 'react-redux'
-import { useParams } from 'react-router-dom'
-import { detailAction } from '../redux/actions/detailAction'
-import ReactDOM from 'react-dom'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPeopleLine, faStar } from '@fortawesome/free-solid-svg-icons'
-import RelatedMovie from '../components/RelatedMovie'
-import Review from '../components/Review'
-import MovieTrailer from '../components/MovieTrailer'
+import React, { useEffect } from 'react';
+import { Col, Container, Row } from 'react-bootstrap';
+import { useDispatch, useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
+import { detailAction } from '../redux/actions/detailAction';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPeopleLine, faStar } from '@fortawesome/free-solid-svg-icons';
+import RelatedMovie from '../components/RelatedMovie';
+import Review from '../components/Review';
+import MovieTrailer from '../components/MovieTrailer';
 
 const MovieDetail = () => {
-  const {id} = useParams()
-  // console.log("id", id)
-  const detail = useSelector(state => state.detail.movieDetail)
-  const {movieReview} = useSelector(state => state.detail)
-  console.log("reviews", movieReview)
-  const {relatedMovie} = useSelector(state => state.detail)
-  console.log("related-movie", relatedMovie)
-
+  const {id} = useParams();
+  const detail = useSelector(state => state.detail.movieDetail);
+  const {movieReview} = useSelector(state => state.detail);
+  const {relatedMovie} = useSelector(state => state.detail);
   const dispatch = useDispatch()
+
   const getMovieDetail = () => {
     dispatch(detailAction.getMovieDetail(id))
-    console.log("iddd", id)
-  }
+  };
+
   useEffect (() => {
     getMovieDetail()
-  }, [])
+  }, []);
+
   return (
     <Container className='detail-container'>
       <Row>
@@ -78,28 +75,33 @@ const MovieDetail = () => {
         </Col>
       </Row>
 
-      <div className='tab-content'>
-        <input type='radio' name='tabmenu' id='tab01' checked/>
-        <label className='reviews-tab' htmlFor='tab01'>REVIEWS</label>
-        <input type='radio' name='tabmenu' id='tab02' />
-        <label htmlFor='tab02'>RELATED MOVIES</label>
-
-        <div className='conbox con1 review-area'>
-          {movieReview.map((review) => (
-            <Col><Review item={review}/></Col>
-          ))}
-        </div>
-        <div className='conbox con2 related-area'>
-          <Row>
-            {relatedMovie.map((related) => (
-              <Col md={6} sm={12}><RelatedMovie item={related}/></Col>
-            ))}
-          </Row>
-        </div>
-      </div>
+      <Row>
+        <Col>
+          <div className='tab-content'>
+            <input type='radio' name='tabmenu' id='tab01' checked/>
+            <label className='reviews-tab' htmlFor='tab01'>REVIEWS</label>
+            <input type='radio' name='tabmenu' id='tab02' />
+            <label htmlFor='tab02'>RELATED MOVIES</label>
       
+            <div className='conbox con1 review-area'>
+              <Row>
+                {movieReview.map((review) => (
+                  <Col lg={12} md={12}><Review item={review}/></Col>
+                ))}
+              </Row>
+            </div>
+            <div className='conbox con2 related-area'>
+              <Row>
+                {relatedMovie.map((related) => (
+                  <Col md={6} sm={12}><RelatedMovie item={related}/></Col>
+                ))}
+              </Row>
+            </div>
+          </div>
+        </Col>
+      </Row>
     </Container>
   )
-}
+};
 
-export default MovieDetail
+export default MovieDetail;

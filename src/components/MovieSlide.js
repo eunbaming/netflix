@@ -1,8 +1,7 @@
-import React from 'react'
-import { Container } from 'react-bootstrap'
-import Carousel from 'react-multi-carousel'
-import 'react-multi-carousel/lib/styles.css'
-import MovieCard from './MovieCard'
+import React from 'react';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import MovieCard from './MovieCard';
 
 const responsive = {
   superLargeDesktop: {
@@ -22,15 +21,15 @@ const responsive = {
     breakpoint: { max: 464, min: 0 },
     items: 1
   }
-}
+};
 
 const MovieSlide = ({movies}) => {
 
   return (
-      <Carousel responsive={responsive}>
-        {movies.results.map((item) => (<MovieCard item={item}/>))}
-      </Carousel>
+    <Carousel responsive={responsive}>
+      {movies.results.map((item) => (<MovieCard item={item}/>))}
+    </Carousel>
   )
-}
+};
 
-export default MovieSlide
+export default MovieSlide;

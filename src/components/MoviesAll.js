@@ -1,13 +1,22 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
-import { Badge } from 'react-bootstrap'
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Badge } from 'react-bootstrap';
+import { detailAction } from '../redux/actions/detailAction';
+import { useNavigate } from 'react-router-dom';
 
 const MoviesAll = ({item}) => {
-  const {genreList} = useSelector(state => state.movie)
+  const {genreList} = useSelector(state => state.movie);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const goToMovieDetail = () => {
+    navigate(`/movies/${item.id}`);
+    dispatch(detailAction.getMovieDetail(item.id));
+  };
   return (
     <div
     className='filter-size'
     style={{backgroundImage : "url(" + `https://www.themoviedb.org/t/p/w710_and_h400_multi_faces/${item.poster_path}` + ")"}}
+    onClick={goToMovieDetail}
     >
       <div className='overlay'>
         <h4 className='movie-title'>{item.title}</h4>
@@ -22,6 +31,6 @@ const MoviesAll = ({item}) => {
       </div>
     </div>
   )
-}
+};
 
-export default MoviesAll
+export default MoviesAll;

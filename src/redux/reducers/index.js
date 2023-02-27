@@ -5,4 +5,4 @@ import movieReducer from "./movieReducer";
 export default combineReducers({
   movie : movieReducer,
   detail : detailReducer
-})
+});
