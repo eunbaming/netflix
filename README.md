@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+# NETFLIX 영화 사이트
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+NETFLIX 사이트를 참고하여 React Redux, Redux Middleware를 이용한 반응형 영화 웹페이지 구축
 
-## Available Scripts
+![NETFLIX](https://user-images.githubusercontent.com/110072947/221752839-51ac3a65-b126-448e-a9a4-7436104c0b35.png)
 
-In the project directory, you can run:
++ Demo : https://netflix-movie-eight.vercel.app/
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 개발 목표
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+데이터가 실존하는 api를 사용하여 영화 웹페이지를 구축 및 React Redux, Redux Middleware 이해를 통한 개발
 
-### `npm test`
+각 페이지 내에 컴포넌트를 추가하여 해당 내용의 재사용성, 편리성을 보안하여 개발
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### 사용 기술
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<a href="#"><img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/></a>
+<a href="#"><img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=white"/></a>
+<a href="#"><img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"/></a>
+<a href="#"><img src="https://img.shields.io/badge/React Router-CA4245?style=flat-square&logo=React Router&logoColor=white"/></a>
+<a href="#"><img src="https://img.shields.io/badge/Redux-764ABC?style=flat-square&logo=Redux&logoColor=white"/></a>
+<a href="#"><img src="https://img.shields.io/badge/Bootstrap-7952B3?style=flat-square&logo=Bootstrap&logoColor=white"/></a>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Advanced Feature
 
-### `npm run eject`
++ 사이트를 들어가 로딩될 때 로딩스피너를 통해 유저가 기다릴 동안의 불편함을 해소
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![NETFLIX](https://user-images.githubusercontent.com/110072947/221754217-a48a6c69-d6a2-4caa-a84f-fd21fe0d694b.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```javascript
+if (loading) {
+    return <div className='loading'><ClipLoader color="fff" loading={loading} size={150} /></div>
+  };
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
++ npm을 사용하여 카테고리별 영화 슬라이드를 개발 및 마우스 오버 시 이벤트 추가
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![NETFLIX](https://user-images.githubusercontent.com/110072947/221755042-9dd0cbad-51fd-4ab1-bf24-9adff5c7358f.png)
 
-## Learn More
+```javascript
+...
+const responsive = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 3000 },
+    items: 5
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 4
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 2
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1
+  }
+};
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+const MovieSlide = ({movies}) => {
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  return (
+    <Carousel responsive={responsive}>
+      {movies.results.map((item) => (<MovieCard item={item}/>))}
+    </Carousel>
+  )
+};
+...
+```
 
-### Code Splitting
++ 영화 키워드 검색 시 해당 키워드에 관련된 영화페이지가 나오도록 개발
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![NETFLIX](https://user-images.githubusercontent.com/110072947/221755513-1fa3efe8-02f1-4280-ab72-3da88b197da3.png)
 
-### Analyzing the Bundle Size
++ 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
++ 영화 검색 시 디테일 페이지로 넘어가며, 해당 내용에서 영화 트레일러 등의 자세한 정보가 나오도록 개발
 
-### Making a Progressive Web App
++ 디테일 페이지 아래에 해당 영화의 리뷰와 관련 영화를 볼 수 있도록 개발
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
++ React Bootstrap과 Media Query를 이용한 반응형 웹사이트 개발
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
