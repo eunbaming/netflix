@@ -1,11 +1,14 @@
 # NETFLIX 영화 사이트
 
+
 NETFLIX 사이트를 참고하여 React Redux, Redux Middleware를 이용한 반응형 영화 웹페이지 구축
 
 ![NETFLIX](https://user-images.githubusercontent.com/110072947/221752839-51ac3a65-b126-448e-a9a4-7436104c0b35.png)
 
 + Demo : https://netflix-movie-eight.vercel.app/
 
+<br/>
+<br/>
 
 ### 개발 목표
 
@@ -13,6 +16,8 @@ NETFLIX 사이트를 참고하여 React Redux, Redux Middleware를 이용한 반
 
 각 페이지 내에 컴포넌트를 추가하여 해당 내용의 재사용성, 편리성을 보안하여 개발
 
+<br/>
+<br/>
 
 ### 사용 기술
 
@@ -23,6 +28,8 @@ NETFLIX 사이트를 참고하여 React Redux, Redux Middleware를 이용한 반
 <a href="#"><img src="https://img.shields.io/badge/Redux-764ABC?style=flat-square&logo=Redux&logoColor=white"/></a>
 <a href="#"><img src="https://img.shields.io/badge/Bootstrap-7952B3?style=flat-square&logo=Bootstrap&logoColor=white"/></a>
 
+<br/>
+<br/>
 
 ### Advanced Feature
 
@@ -35,6 +42,8 @@ if (loading) {
     return <div className='loading'><ClipLoader color="fff" loading={loading} size={150} /></div>
   };
 ```
+
+<br/>
 
 + npm을 사용하여 카테고리별 영화 슬라이드를 개발 및 마우스 오버 시 이벤트 추가
 
@@ -73,17 +82,64 @@ const MovieSlide = ({movies}) => {
 ...
 ```
 
-+ 영화 키워드 검색 시 해당 키워드에 관련된 영화페이지가 나오도록 개발
+<br/>
+
++ 영화 키워드 검색 시 해당 키워드에 관련된 영화 페이지가 나오도록 개발
 
 ![NETFLIX](https://user-images.githubusercontent.com/110072947/221755513-1fa3efe8-02f1-4280-ab72-3da88b197da3.png)
 
-+ 
+<br/>
 
-+ 영화 검색 시 디테일 페이지로 넘어가며, 해당 내용에서 영화 트레일러 등의 자세한 정보가 나오도록 개발
++ 영화 페이지에서 장르 클릭 시 해당 장르에 관련된 영화 페이지가 나오도록 개발
 
-+ 디테일 페이지 아래에 해당 영화의 리뷰와 관련 영화를 볼 수 있도록 개발
+![NETFLIX](https://user-images.githubusercontent.com/110072947/221757466-d5b727ab-35bb-46f9-97d6-9cc29d6ff0fa.png)
+
+<br/>
+
++ 영화 페이지 아래 부분에 페이지네이션 개발
+
+<a href="#"><img src="https://user-images.githubusercontent.com/110072947/221759603-36fd1a28-b61d-4afe-8124-ce5b210c8d38.png" width="500"/></a>
+<a href="#"><img src="https://user-images.githubusercontent.com/110072947/221759562-b5f5f3d6-2360-4bb4-a584-1899c36f9f20.png" width="500"/></a>
+
+<br/>
+
++ 영화 검색 시 디테일 페이지(왼쪽)로 넘어가며, 해당 내용에서 영화 트레일러(오른쪽) 등의 자세한 정보가 나오도록 개발
+
+<a href="#"><img src="https://user-images.githubusercontent.com/110072947/221757737-71e5e8fa-ab52-49f1-a8ff-bd7c6a49da0d.png" width="500"/></a>
+<a href="#"><img src="https://user-images.githubusercontent.com/110072947/221757709-7db08836-e603-4c88-88a0-7771010c797b.png" width="500"/></a>
+
+<br/>
+
++ 디테일 페이지 아래에 해당 영화의 리뷰(왼쪽)와 관련 영화들(오른쪽)을 볼 수 있도록 개발
+
+<a href="#"><img src="https://user-images.githubusercontent.com/110072947/221759098-ebe56798-346b-469a-a804-4f578a367c32.png" width="500"/></a>
+<a href="#"><img src="https://user-images.githubusercontent.com/110072947/221759071-8403e4ec-053a-4e41-93b4-7b5444a97a20.png" width="500"/></a>
+
+<br/>
 
 + React Bootstrap과 Media Query를 이용한 반응형 웹사이트 개발
+
+[Web ver.]
+
+<a href="#"><img src="https://user-images.githubusercontent.com/110072947/221755042-9dd0cbad-51fd-4ab1-bf24-9adff5c7358f.png" width="300"/></a>
+<a href="#"><img src="https://user-images.githubusercontent.com/110072947/221757737-71e5e8fa-ab52-49f1-a8ff-bd7c6a49da0d.png" width="300"/></a>
+<a href="#"><img src="https://user-images.githubusercontent.com/110072947/221757466-d5b727ab-35bb-46f9-97d6-9cc29d6ff0fa.png" width="300"/></a>
+
+[Mobile ver.]
+
+<a href="#"><img src="https://user-images.githubusercontent.com/110072947/221760293-8d383358-0946-4cc2-9bb3-7b29fdeb8b7a.png" width="300"/></a>
+<a href="#"><img src="https://user-images.githubusercontent.com/110072947/221760258-a6615c90-aa1c-491a-86c0-3e567b7e54a2.png" width="300"/></a>
+<a href="#"><img src="https://user-images.githubusercontent.com/110072947/221760238-c145bc43-55d0-4d5c-a5b5-20484e28d225.png" width="300"/></a>
+
+<br/>
+<br/>
+
+# 개선 사항
+
++ 처음에 관련 영화 버튼 클릭 시 한박자 늦게 로딩되는 부분에 대한 해결 필요
+
++ 영화 검색 또는 영화 페이지에서 장르를 선택한 후의 결과값이 계속 남아있는 부분에 대한 해결 필요
+
 
 
 
