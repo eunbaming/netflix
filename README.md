@@ -117,7 +117,7 @@ const MovieSlide = ({movies}) => {
 
 <br/>
 
-+ React Bootstrap과 Media Query를 이용한 반응형 웹사이트 개발
++ React Bootstrap과 Media Query를 이용한 반응형 웹페이지 개발
 
 [Web ver.]
 
