@@ -98,22 +98,22 @@ const MovieSlide = ({movies}) => {
 
 + 영화 페이지 아래 부분에 페이지네이션 개발
 
-<a href="#"><img src="https://user-images.githubusercontent.com/110072947/221759603-36fd1a28-b61d-4afe-8124-ce5b210c8d38.png" width="500"/></a>
-<a href="#"><img src="https://user-images.githubusercontent.com/110072947/221759562-b5f5f3d6-2360-4bb4-a584-1899c36f9f20.png" width="500"/></a>
+<a href="#"><img src="https://user-images.githubusercontent.com/110072947/221759603-36fd1a28-b61d-4afe-8124-ce5b210c8d38.png" width="400"/></a>
+<a href="#"><img src="https://user-images.githubusercontent.com/110072947/221759562-b5f5f3d6-2360-4bb4-a584-1899c36f9f20.png" width="400"/></a>
 
 <br/>
 
 + 영화 검색 시 디테일 페이지(왼쪽)로 넘어가며, 해당 내용에서 영화 트레일러(오른쪽) 등의 자세한 정보가 나오도록 개발
 
-<a href="#"><img src="https://user-images.githubusercontent.com/110072947/221757737-71e5e8fa-ab52-49f1-a8ff-bd7c6a49da0d.png" width="500"/></a>
-<a href="#"><img src="https://user-images.githubusercontent.com/110072947/221757709-7db08836-e603-4c88-88a0-7771010c797b.png" width="500"/></a>
+<a href="#"><img src="https://user-images.githubusercontent.com/110072947/221757737-71e5e8fa-ab52-49f1-a8ff-bd7c6a49da0d.png" width="400"/></a>
+<a href="#"><img src="https://user-images.githubusercontent.com/110072947/221757709-7db08836-e603-4c88-88a0-7771010c797b.png" width="400"/></a>
 
 <br/>
 
 + 디테일 페이지 아래에 해당 영화의 리뷰(왼쪽)와 관련 영화들(오른쪽)을 볼 수 있도록 개발
 
-<a href="#"><img src="https://user-images.githubusercontent.com/110072947/221759098-ebe56798-346b-469a-a804-4f578a367c32.png" width="500"/></a>
-<a href="#"><img src="https://user-images.githubusercontent.com/110072947/221759071-8403e4ec-053a-4e41-93b4-7b5444a97a20.png" width="500"/></a>
+<a href="#"><img src="https://user-images.githubusercontent.com/110072947/221759098-ebe56798-346b-469a-a804-4f578a367c32.png" width="400"/></a>
+<a href="#"><img src="https://user-images.githubusercontent.com/110072947/221759071-8403e4ec-053a-4e41-93b4-7b5444a97a20.png" width="400"/></a>
 
 <br/>
 
@@ -121,15 +121,15 @@ const MovieSlide = ({movies}) => {
 
 [Web ver.]
 
-<a href="#"><img src="https://user-images.githubusercontent.com/110072947/221755042-9dd0cbad-51fd-4ab1-bf24-9adff5c7358f.png" width="300"/></a>
-<a href="#"><img src="https://user-images.githubusercontent.com/110072947/221757737-71e5e8fa-ab52-49f1-a8ff-bd7c6a49da0d.png" width="300"/></a>
-<a href="#"><img src="https://user-images.githubusercontent.com/110072947/221757466-d5b727ab-35bb-46f9-97d6-9cc29d6ff0fa.png" width="300"/></a>
+<a href="#"><img src="https://user-images.githubusercontent.com/110072947/221755042-9dd0cbad-51fd-4ab1-bf24-9adff5c7358f.png" width="250"/></a>
+<a href="#"><img src="https://user-images.githubusercontent.com/110072947/221757737-71e5e8fa-ab52-49f1-a8ff-bd7c6a49da0d.png" width="250"/></a>
+<a href="#"><img src="https://user-images.githubusercontent.com/110072947/221757466-d5b727ab-35bb-46f9-97d6-9cc29d6ff0fa.png" width="250"/></a>
 
 [Mobile ver.]
 
-<a href="#"><img src="https://user-images.githubusercontent.com/110072947/221760293-8d383358-0946-4cc2-9bb3-7b29fdeb8b7a.png" width="300"/></a>
-<a href="#"><img src="https://user-images.githubusercontent.com/110072947/221760258-a6615c90-aa1c-491a-86c0-3e567b7e54a2.png" width="300"/></a>
-<a href="#"><img src="https://user-images.githubusercontent.com/110072947/221760238-c145bc43-55d0-4d5c-a5b5-20484e28d225.png" width="300"/></a>
+<a href="#"><img src="https://user-images.githubusercontent.com/110072947/221760293-8d383358-0946-4cc2-9bb3-7b29fdeb8b7a.png" width="250"/></a>
+<a href="#"><img src="https://user-images.githubusercontent.com/110072947/221760258-a6615c90-aa1c-491a-86c0-3e567b7e54a2.png" width="250"/></a>
+<a href="#"><img src="https://user-images.githubusercontent.com/110072947/221760238-c145bc43-55d0-4d5c-a5b5-20484e28d225.png" width="250"/></a>
 
 <br/>
 <br/>
