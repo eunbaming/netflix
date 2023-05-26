@@ -1,7 +1,6 @@
 # NETFLIX 영화 사이트
 
-
-NETFLIX 사이트를 참고하여 React Redux, Redux Middleware를 이용한 반응형 영화 웹페이지 구축
+<br/>
 
 ![NETFLIX](https://user-images.githubusercontent.com/110072947/221752839-51ac3a65-b126-448e-a9a4-7436104c0b35.png)
 
@@ -12,9 +11,9 @@ NETFLIX 사이트를 참고하여 React Redux, Redux Middleware를 이용한 반
 
 ### 개발 목표
 
-데이터가 실존하는 api를 사용하여 영화 웹페이지를 구축 및 React Redux, Redux Middleware 이해를 통한 개발
+NETFLIX 사이트를 참고하여 데이터가 실존하는 api를 사용하여 영화 웹페이지를 구축 및 React Redux, Redux Middleware 이해를 통한 개발
 
-각 페이지 내에 컴포넌트를 추가하여 해당 내용의 재사용성, 편리성을 보안하여 개발
+각 페이지 내에 컴포넌트를 추가하여 해당 내용의 재사용성, 편리성을 보안하여 반응형으로 개발
 
 <br/>
 <br/>
@@ -45,7 +44,7 @@ if (loading) {
 
 <br/>
 
-+ npm을 사용하여 카테고리별 영화 슬라이드를 개발 및 마우스 오버 시 이벤트 추가
++ npm을 활용하여 카테고리별 영화 슬라이드를 개발 및 마우스 오버 시 이벤트 추가
 
 ![NETFLIX](https://user-images.githubusercontent.com/110072947/221755042-9dd0cbad-51fd-4ab1-bf24-9adff5c7358f.png)
 
@@ -96,14 +95,14 @@ const MovieSlide = ({movies}) => {
 
 <br/>
 
-+ 영화 페이지 아래 부분에 페이지네이션 개발
++ 영화 페이지 아래 부분에 페이지네이션현구현
 
 <a href="#"><img src="https://user-images.githubusercontent.com/110072947/221759603-36fd1a28-b61d-4afe-8124-ce5b210c8d38.png" width="400"/></a>
 <a href="#"><img src="https://user-images.githubusercontent.com/110072947/221759562-b5f5f3d6-2360-4bb4-a584-1899c36f9f20.png" width="400"/></a>
 
 <br/>
 
-+ 영화 검색 시 디테일 페이지(왼쪽)로 넘어가며, 해당 내용에서 영화 트레일러(오른쪽) 등의 자세한 정보가 나오도록 개발
++ 영화 검색 시 디테일 페이지(왼쪽)로 넘어가며, 해당 내용에서 영화 트레일러(오른쪽) 등의 자세한 정보가 나오도록 기능 
 
 <a href="#"><img src="https://user-images.githubusercontent.com/110072947/221757737-71e5e8fa-ab52-49f1-a8ff-bd7c6a49da0d.png" width="400"/></a>
 <a href="#"><img src="https://user-images.githubusercontent.com/110072947/221757709-7db08836-e603-4c88-88a0-7771010c797b.png" width="400"/></a>
