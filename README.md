@@ -95,7 +95,7 @@ const MovieSlide = ({movies}) => {
 
 <br/>
 
-+ 영화 페이지 아래 부분에 페이지네이션현구현
++ 영화 페이지 아래 부분에 페이지네이션 구현
 
 <a href="#"><img src="https://user-images.githubusercontent.com/110072947/221759603-36fd1a28-b61d-4afe-8124-ce5b210c8d38.png" width="400"/></a>
 <a href="#"><img src="https://user-images.githubusercontent.com/110072947/221759562-b5f5f3d6-2360-4bb4-a584-1899c36f9f20.png" width="400"/></a>
